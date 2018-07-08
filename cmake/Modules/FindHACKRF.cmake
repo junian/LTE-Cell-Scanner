@@ -22,6 +22,7 @@ FIND_LIBRARY(HACKRF_LIBRARY
   /usr/lib64
   /usr/lib
   /usr/local/lib
+  /usr/lib/arm-linux-gnueabihf
   NO_DEFAULT_PATH
 )
 

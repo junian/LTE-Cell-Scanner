@@ -15,6 +15,7 @@ FIND_PATH(OPENCL_INCLUDE_DIR CL/cl.h
   /opt/AMDAPP/include/
   /usr/local/include
   /usr/local/cuda/include/
+  /usr/lib/arm-linux-gnueabihf
   NO_DEFAULT_PATH
 )
 
@@ -25,6 +26,7 @@ FIND_LIBRARY(OPENCL_LIBRARY libOpenCL.so
   /opt/AMDAPP/lib/x86_64
   /usr/lib
   /usr/local/lib
+  /usr/lib/arm-linux-gnueabihf
   NO_DEFAULT_PATH
 )
 
