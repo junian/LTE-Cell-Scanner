@@ -1424,7 +1424,7 @@ int main(
   } else {
     cout << "Detected the following cells:" << endl;
     cout << "DPX:TDD/FDD; A: #antenna ports C: CP type ; P: PHICH duration ; PR: PHICH resource type" << endl;
-    cout << "DPX CID A      fc   freq-offset RXPWR C nRB P  PR CrystalCorrectionFactor" << endl;
+    cout << "DPX CID   A      fc   freq-offset RXPWR C nRB P  PR CrystalCorrectionFactor" << endl;
     list <Cell>::iterator it=cells_final.begin();
     while (it!=cells_final.end()) {
       // Use a stringstream to avoid polluting the iostream settings of cout.
@@ -1434,7 +1434,7 @@ int main(
       else
         ss << "FDD ";
       ss << setw(3) << (*it).n_id_cell();
-      ss << setw(2) << (*it).n_ports;
+      ss << " " << setw(3) << (*it).n_ports;
       ss << " " << setw(6) << setprecision(5) << (*it).fc_requested/1e6 << "M";
       ss << " " << setw(13) << freq_formatter((*it).freq_superfine);
       ss << " " << setw(5) << setprecision(3) << db10((*it).pss_pow);
